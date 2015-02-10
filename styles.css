@@ -21,7 +21,28 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
+  position:absolute;
+}
+.blinky-dot{
   border:10px solid red;
+  border-radius:10px;
+  position:absolute;
+}
+.carlton{
+  height: 280px;
+  width: 200px;
+  background-image: url('img/carlton.gif');
+  background-size: 100% auto;
+  /*border:10px solid red;*/
+  border-radius:10px;
+  position:absolute;
+}
+.raver{
+  height: 220px;
+  width: 200px;
+  background-image: url('img/ravebunny.gif');
+  background-size: 100% auto;
+  /*border:10px solid red;*/
   border-radius:10px;
   position:absolute;
 }
