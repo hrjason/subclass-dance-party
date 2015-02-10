@@ -28,6 +28,46 @@ $(document).ready(function(){
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    // put the dancer we just made into dancers array
+    // dancers.push(our fin dancer);
+    window.dancers.push(dancer);
+
+    $('.img-zoom').mouseover(function() {
+      $(this).addClass('transition');
+    });
+    $('.img-zoom').mouseleave(function() {
+      $(this).removeClass('transition');
+    });
+
   });
+
+  $(".lineUpDancers").on("click", function(){
+    //$.each(window.dancers, this.lineUp);
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].lineUp();
+    }
+    //$(".dancers").each(function(){
+    //  $(this).lineUp();
+    //});
+  });
+//});
+
+  $(".pairDancers").on("click", function(){
+    //on pairing click... activate function
+  //iterate through values
+
+  // for distances, use dancer's top and left properties
+
+  //var distances = [];
+    //calculate distance between two dancers
+      //find nearest dancers
+      /*
+    for(var i=0; i < window.dancers.length; i = i + 2){
+      //compare window.dancers[i] and window.dancers[i+1];
+      var x $(windows.dancer[i]).css("left")
+
+    }
+    */
+    });
 });
 

@@ -1,7 +1,7 @@
 var RaverDancer = function(top, left, timeBetweenSteps){
   //var blinkyDancer = new Dancer(top, left, timeBetweenSteps);
   Dancer.call(this, top, left, timeBetweenSteps);
-  this.$node.append("<div class='raver'></div>");
+  this.$node.append("<img src='img/ravebunny.gif' class='img-zoom'>");
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
   //this.oldStep = hold.step
@@ -19,6 +19,15 @@ RaverDancer.prototype.step = function(){
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
   Dancer.prototype.step.call(this);
-  this.$node.toggle();
+  this.$node.fadeIn('slow');
   //setTimeout(this.oldStep.bind(this), this._timeBetweenSteps);
+};
+RaverDancer.prototype.lineUp = function(){
+  // Use css top and left properties to position our <span> tag
+  // where it belongs on the page. See http://api.jquery.com/css/
+  //
+  //var styleSettings = {
+    //left: left
+  //};
+  this.$node.css("left", "400px");
 };
